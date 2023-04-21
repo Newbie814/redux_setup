@@ -4,6 +4,7 @@ import { calculateTotal } from './features/cart/cartSlice';
 import { useEffect } from 'react';
 
 function App() {
+  const { isOpen } = useSelector((state) => state.modal);
   const { cartItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -12,9 +13,9 @@ function App() {
 
   return (
     <main>
+      {isOpen && <Modal />}
       <Navbar />
       <CartContainer />
-      <Modal />
     </main>
   );
 }
