@@ -1,7 +1,6 @@
 import { ChevronDown, ChevronUp } from '../icons';
 
 const CartItem = ({ id, title, price, img, amount }) => {
-  console.log(id);
   return (
     <article className='cart-item'>
       <img src={img} alt={title} />
