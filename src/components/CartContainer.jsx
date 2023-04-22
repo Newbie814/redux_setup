@@ -42,8 +42,10 @@ const CartContainer = () => {
           disabled={cartItems.length === 0}
           style={
             cartItems.length !== 0
-              ? { visibility: 'visible' }
-              : { visibility: 'hidden' }
+              ? { opacity: '1' }
+              : { opacity: '.3', transition: 'all .3s ease-in-out' }
+            // ? { visibility: 'visible' }
+            // : { visibility: 'hidden' }
           }
         >
           clear cart
